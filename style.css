@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    background-color: rgba(42, 42, 46, 1);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.input-search{
+    background-color: aliceblue;
+    width: 45%;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 0px rgb(163, 163, 163) inset;
+    background-color:rgb(56, 56, 61);
+    position: relative;
+    
+}
+.input-search input{
+    width: 85%;
+    display: inline-block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    overflow: hidden;
+}
+
+.input-search img{
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    margin-right: 10px;
+    display: none;
+    
+}
+
+.input-search button{
+    width: 10%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(56, 56, 61,0.5);
+    border: none;
+    opacity: 0.5;
+    color: #fff;
+    font-size:25px;
+   
+  
+}
+.input-search button:hover{
+    background-color: rgba(39, 39, 41, 0.5);
+    opacity: 0.5;
+    cursor: pointer;
+    
+}
+
+/*Sites Preferidos*/
+.sites-preferidos{
+    width: 80%;
+    margin: 0 auto;
+   
+}
+.container{
+    width: 88%;
+    padding: 0;
+    margin: 0 auto;
+}
+/*BTN-sites-preferidos*/
+.btn-envelope{
+    display: inline-block;
+    position: relative;
+}
+.btn-envelope h1{
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: white;
+    cursor: pointer;
+}
+.btn-envelope h1 span{
+    display: inline-block;
+}
+
+/*imagens*/
+.itens{
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /*Garante que a linha será quebrada, quando um dos flex não couber na tela.*/
+    flex-shrink: 1;
+    left: 0;
+}
+.item{
+    margin-left: 20px;
+    margin-bottom: 2em;
+}
+.item:first-child{
+    margin-left: 0;
+    
+}
+.itens p{
+    display: block;
+    font-size: 0.8em;
+    color: #fff;
+    margin-top: 5px;
+}

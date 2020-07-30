@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Página inicial</title>
+        <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <link rel="stylesheet" type="text/css" href="./style-btn-img.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <div class="input-search">
+                <img src="./logo.google.png" alt="Logo-Google">
+                <input type="text" name="pequisar" placeholder="Pesquisar na web" />
+                <button name="search" value="search">➜</button>
+            </div>
+        </header>
+        <main>
+            <div class="sites-preferidos">
+                <div class="container" id="box-toggle">
+                    <ul class="itens">
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/react_original_logo_icon_146374.png" alt="Logo-React"/>
+                            </div>
+                            <p>react</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="icons/Google_icon-icons.com_60497.png" alt="Logo-Google"/>
+                            </div>
+                            <p>google</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/Facebook_Messenger_icon-icons.com_60505.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>facebook</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/github_icon-icons.com_60477.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>github</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/Gmail_29991.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>gmail</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/spotify_icon-icons.com_60457.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>spotify</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/Twitter_icon-icons.com_60507.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>twitter</p>
+                        </li>
+                        <li class="item">
+                            <div class="btn">
+                                <a href="index.html"><div class="btn-mais"></div></a>
+                                <img src="./icons/dropbox_icon-icons.com_60465.png" alt="Logo-Facebook"/>
+                            </div>
+                            <p>dropbox</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+    jQuery.fn.toggleText = function(a,b) {
+        return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+    }
+    $(document).ready(function(){
+        $('.itens').before('<div class="btn-envelope"><h1>Sites preferidos <span>▾</span></h1></div>');
+        $('.itens').css('display', 'none')
+        $('div', '#box-toggle').click(function() {
+            $(this).next().slideToggle('slow')
+            .siblings('.itens:visible').slideToggle('fast');
+            // aqui começa o funcionamento do plugin
+            $(this).toggleText('▾','▴')
+            .siblings('div').next('.itens:visible').prev()
+        .toggleText('▾','▴')
+        });
+    });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(56, 56, 61);
+    box-shadow: 0 0 4px 1px rgb(29, 29, 31);
+    border-radius:5px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.btn-mais {
+    color: white;
+    font-weight: bold;
+    font-size: 8px;
+    letter-spacing: 1px;
+    background-color: #141414;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    right: 0;
+    position: absolute;
+    padding: 2px;
+    border: 1px solid #fff;
+    opacity: 0;
+    transform: translate(10px,-10px);
+    transition: opacity 180ms linear;
+}   
+.btn-mais::before{
+    content: '●●●';
+    color: #fff;
+    display: block;
+    margin-top: 4px;
+}
+.btn:hover > a >.btn-mais{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.7s;
+    transition: opacity 180ms linear;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+.btn-mais:hover{
+    border: 2px solid #fff;
+}
+
+.btn img{
+    width: 100px;
+    height: 100px;
+}
